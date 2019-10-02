@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="matchDetails" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="400.0" styleClass="dark-panel" stylesheets="@config.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MatchDetailsController">
+   <children>
+      <Label layoutX="18.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="250.0" text="Select details for match to be predicted" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="59.0" text="SELECT MATCH TYPE" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="80.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="179.0" text="Maximum matches to determine the winner" textFill="#b9b6b6" wrapText="true" />
+      <JFXComboBox fx:id="comboBox" layoutX="249.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="150.0" styleClass="comboBoxT" unFocusColor="#9d5f02" visibleRowCount="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.79" topOpacity="0.08" />
+         </effect>
+      </JFXComboBox>
+      <JFXComboBox fx:id="comboTournaments" cache="true" layoutX="200.0" layoutY="221.0" maxHeight="25.0" maxWidth="200.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="200.0" styleClass="comboBox" unFocusColor="#9d5f02" visibleRowCount="3">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.79" topOpacity="0.08" />
+         </effect>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </JFXComboBox>
+      <Label layoutX="18.0" layoutY="216.0" text="SELECT TOURNAMENT" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="235.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="35.0" prefWidth="179.0" text="Start writing and select one of the options" textFill="#b9b6b6" wrapText="true" />
+      <JFXButton fx:id="cancel" layoutX="166.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#cancel" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" stylesheets="@config.css" text="CANCEL">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="save" layoutX="283.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#save" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" stylesheets="@config.css" text="SAVE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="error_label" layoutX="257.0" layoutY="223.0" text="Chose one of the options" textFill="#03feff" visible="false" />
+   </children>
+</AnchorPane>

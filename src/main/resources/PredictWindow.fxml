@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="predictWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="400.0" styleClass="dark-panel" stylesheets="@config.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PredictWindowController">
+   <children>
+      <Circle fx:id="logo1" accessibleRole="HYPERLINK" fill="#1f93ff00" layoutX="74.0" layoutY="70.0" radius="52.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Circle fx:id="logo2" accessibleRole="HYPERLINK" fill="#1f93ff00" layoutX="326.0" layoutY="70.0" radius="52.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Circle>
+      <Label fx:id="score1" layoutX="128.0" layoutY="48.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="62.0" text="65%" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Segoe UI Black" size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="score2" layoutX="219.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" prefWidth="55.0" text="65%" textFill="WHITE" visible="false">
+         <font>
+            <Font name="Segoe UI Black" size="25.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="predictButton" layoutX="125.0" layoutY="312.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#prediction" prefHeight="50.0" prefWidth="150.0" styleClass="buttons" stylesheets="@config.css" text="PREDICT">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="team1" layoutX="12.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="148.0" styleClass="comboBoxT" unFocusColor="#9d5f02" visibleRowCount="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.79" topOpacity="0.08" />
+         </effect>
+      </JFXComboBox>
+      <JFXComboBox fx:id="team2" layoutX="240.0" layoutY="150.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="148.0" styleClass="comboBoxT" unFocusColor="#9d5f02" visibleRowCount="4">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.79" topOpacity="0.08" />
+         </effect>
+      </JFXComboBox>
+      <ImageView fitHeight="93.0" fitWidth="148.0" layoutX="14.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+      <ImageView fitHeight="93.0" fitWidth="148.0" layoutX="240.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+   </children>
+</AnchorPane>

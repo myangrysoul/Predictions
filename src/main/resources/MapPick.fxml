@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mapPick" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="400.0" styleClass="dark-panel" stylesheets="@config.css" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MapPickController">
+   <children>
+      <Label layoutX="18.0" layoutY="20.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefWidth="250.0" text="Select maps to be played" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="cancel" layoutX="166.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#cancel" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" stylesheets="@config.css" text="CANCEL">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="save" layoutX="283.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#accept" prefHeight="35.0" prefWidth="100.0" styleClass="buttons" stylesheets="@config.css" text="SAVE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox fx:id="dust2" checkedColor="#f0db7d" layoutX="40.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="60.0" text="Dust2" textFill="WHITE" unCheckedColor="#f0db7d" />
+      <JFXCheckBox fx:id="train" checkedColor="#019001" layoutX="39.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Train" textFill="WHITE" unCheckedColor="#019001" />
+      <JFXCheckBox fx:id="overpass" checkedColor="#ff9d00" layoutX="310.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Overpass" textFill="WHITE" unCheckedColor="#ff9d00" />
+      <JFXCheckBox fx:id="nuke" checkedColor="#ff2c00" layoutX="220.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Nuke" textFill="WHITE" unCheckedColor="#ff2c00" />
+      <JFXCheckBox fx:id="inferno" checkedColor="#005cff" layoutX="130.0" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Inferno" textFill="WHITE" unCheckedColor="#005cff" />
+      <JFXCheckBox fx:id="vertigo" checkedColor="#62f8b7" layoutX="130.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Vertigo" textFill="WHITE" unCheckedColor="#62f8b7" />
+      <JFXCheckBox fx:id="mirage" checkedColor="#7000ff" layoutX="220.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Mirage" textFill="WHITE" unCheckedColor="#7000ff" />
+      <JFXCheckBox fx:id="cache" checkedColor="#00d0ff" layoutX="310.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#checkbox" prefHeight="20.0" prefWidth="70.0" text="Cache" textFill="WHITE" unCheckedColor="#00d0ff" />
+      <HBox layoutX="65.0" layoutY="170.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="102.0" prefWidth="307.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0">
+         <children>
+            <Circle fx:id="second" accessibleRole="HYPERLINK" fill="#1f93ff00" radius="50.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="first" accessibleRole="HYPERLINK" fill="#1f93ff00" radius="50.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Circle>
+            <Circle fx:id="third" accessibleRole="HYPERLINK" fill="#1f93ff00" radius="50.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+         </children>
+      </HBox>
+      <HBox layoutX="97.0" layoutY="260.0" maxHeight="100.0" maxWidth="200.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Circle fx:id="fifth" accessibleRole="HYPERLINK" fill="#1f93ff00" radius="50.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+            <Circle fx:id="fourth" accessibleRole="HYPERLINK" fill="#1f93ff00" radius="50.0" stroke="#00ff88" strokeType="INSIDE" styleClass="circle">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Circle>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
